@@ -1,4 +1,6 @@
+@import "~bootstrap/scss/bootstrap";
 @import "./components/Hero/_hero.scss";
+@import "./components/MemoriesCard/memoriesCard";
 
 .App {
   text-align: center;
