@@ -5,21 +5,29 @@ import Button from "react-bootstrap/Button";
 import cover from "../../assets/images/hero-bg.jpg";
 import Memory from "../Memory";
 
-const MemoriesCard: React.FunctionComponent = () => {
+interface IMemory {
+  image: string;
+  caption: string;
+}
+interface IProps {
+  year: number;
+  memories: IMemory[];
+}
+
+const MemoriesCard: React.FunctionComponent<IProps> = ({ year, memories }) => {
   return (
     <Accordion className="component-MemoriesCard">
       <Card>
         <Card.Header>
           <Accordion.Toggle as="figure" eventKey="0">
-            2019
+            {year}
           </Accordion.Toggle>
         </Card.Header>
         <Accordion.Collapse eventKey="0">
           <Card.Body className="component-MemoriesCard__body">
-            <Memory />
-            <Memory />
-            <Memory />
-            <Memory />
+            {memories.map((memory, idx) => (
+              <Memory image={memory.image} caption={memory.caption} />
+            ))}
           </Card.Body>
         </Accordion.Collapse>
       </Card>
