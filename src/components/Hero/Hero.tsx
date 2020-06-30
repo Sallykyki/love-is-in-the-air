@@ -6,8 +6,7 @@ const Hero: React.FunctionComponent = () => {
     <div className="component-Hero">
       <div className="component-Hero__title">
         <img src={animatedBg} />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </div>
     </div>
   );
