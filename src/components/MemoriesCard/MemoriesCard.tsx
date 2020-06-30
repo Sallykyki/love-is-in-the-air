@@ -3,19 +3,24 @@ import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import cover from "../../assets/images/hero-bg.jpg";
+import Memory from "../Memory";
 
 const MemoriesCard: React.FunctionComponent = () => {
   return (
     <Accordion className="component-MemoriesCard">
       <Card>
-        <Card.Img src={cover} />
         <Card.Header>
-          <Accordion.Toggle as={Button} variant="link" eventKey="0">
-            Click me!
+          <Accordion.Toggle as="figure" eventKey="0">
+            2019
           </Accordion.Toggle>
         </Card.Header>
         <Accordion.Collapse eventKey="0">
-          <Card.Body>Hello! I'm the body</Card.Body>
+          <Card.Body className="component-MemoriesCard__body">
+            <Memory />
+            <Memory />
+            <Memory />
+            <Memory />
+          </Card.Body>
         </Accordion.Collapse>
       </Card>
     </Accordion>
