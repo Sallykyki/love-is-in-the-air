@@ -1,8 +1,6 @@
 import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import TestImg from "../../assets/images/hero-bg.jpg";
-import Container from "react-bootstrap/Container";
 import Figure from "react-bootstrap/Figure";
 
 interface IProps {
