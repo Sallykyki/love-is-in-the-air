@@ -17,7 +17,11 @@ const MemoriesCard: React.FunctionComponent<IProps> = ({ year, memories }) => {
     <Accordion className="component-MemoriesCard">
       <Card>
         <Card.Header>
-          <Accordion.Toggle as="figure" eventKey="0">
+          <Accordion.Toggle
+            className="component-MemoriesCard__btn"
+            as="button"
+            eventKey="0"
+          >
             {year}
           </Accordion.Toggle>
         </Card.Header>
@@ -32,43 +36,5 @@ const MemoriesCard: React.FunctionComponent<IProps> = ({ year, memories }) => {
     </Accordion>
   );
 };
-// interface IProps {}
-
-// interface IState {
-//   eventKey: string;
-// }
-
-// class MemoriesCard extends React.Component<IProps, IState> {
-//   constructor(props: IProps) {
-//     super(props);
-//     this.state = { eventKey: "0" };
-//   }
-
-//   toggleCard = () => {
-//     this.setState({ eventKey: "0" });
-//   };
-//   render() {
-//     console.log(this.state.eventKey);
-//     return (
-//       <Accordion>
-//         <Card>
-//           <Card.Header>
-//             <Accordion.Toggle
-//               as={Button}
-//               variant="link"
-//               eventKey={"0"}
-//               // onClick={this.toggleCard}
-//             >
-//               Click me!
-//             </Accordion.Toggle>
-//           </Card.Header>
-//           <Accordion.Collapse eventKey={"0"}>
-//             <Card.Body>Hello! I'm the body</Card.Body>
-//           </Accordion.Collapse>
-//         </Card>
-//       </Accordion>
-//     );
-//   }
-// }
 
 export default MemoriesCard;
