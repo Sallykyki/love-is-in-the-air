@@ -8,20 +8,24 @@
   width: fit-content;
   font-family: "Marck Script", cursive;
   font-weight: 400;
+
   &:focus,
   &:active,
   &:hover {
     outline: 0;
-    background: transparent;
+    background-color: initial !important;
+    border: none !important;
+    box-shadow: initial !important;
   }
-  &:hover {
-    color: $pink-1;
+  &:hover,
+  &:active {
     font-weight: 600;
   }
 
   &__btn-label {
     margin-left: 8px;
     font-size: 1.2rem;
+    color: $pink-1;
   }
 
   &__animated-icon {
