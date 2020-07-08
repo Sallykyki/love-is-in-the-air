@@ -13,7 +13,11 @@ const Memory: React.FunctionComponent<IProps> = ({ image, caption }) => {
     <Row>
       <Col lg={{ span: 8, offset: 2 }}>
         <Figure className="component-Memory">
-          <Figure.Image className="component-Memory__img" src={image} />
+          <div
+            className="component-Memory__img"
+            style={{ backgroundImage: `url("${image}")` }}
+          ></div>
+          {/* <Figure.Image className="component-Memory__img" src={image} /> */}
           <Figure.Caption className="component-Memory__caption">
             {caption}
           </Figure.Caption>
